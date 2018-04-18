@@ -28,9 +28,17 @@
 <body>
 <div class="reveal">
 	<div class="slides">
-		<section data-background="#FFFFFF"><img class="fragment" data-duration="2" data-animate="fadeIn"
-																						src="img/ministry.png"></section>
+		<section data-background="#FFFFFF">
+			<img class="fragment" data-duration="2" data-animate="fadeIn" src="img/ministry.png">
+		</section>
+		<section data-background="img/title/sw-bg.png" data-global-fragment="#title-text">
+		</section>
 	</div>
+</div>
+
+<div class="fullscreen-container" id="title-text">
+		<img src="img/title/dart.gif" style=" width:900px; animation-duration: 10s" class="animated zoomIn">
+		<img src="img/title/return.png" style=" width:450px; padding-top: 50px; animation-delay: 10.3s; animation-duration: 2s" class="animated fadeIn">
 </div>
 
 <script src="lib/js/head.min.js"></script>
@@ -52,7 +60,8 @@
             {src: 'plugin/alt-arrows/alt-arrows.js', async: true},
             {src: 'plugin/blur-background/blur-background.js'},
             {src: 'plugin/loader-splashscreen/loader-splashscreen.js'},
-            {src: 'plugin/code-fragment-highlight/code-fragment-highlight.js'}
+            {src: 'plugin/code-fragment-highlight/code-fragment-highlight.js'},
+            {src: 'plugin/global-fragments/global-fragments.js'}
         ],
         keyboard: {
             39: 'next',
