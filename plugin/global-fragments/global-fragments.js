@@ -32,7 +32,7 @@ let RevealScriptRunner = window.RevealScriptRunner || (() => {
     });
 
     function hideFragments() {
-        $("[" + dataAttrName + "]").each((i, el) => {
+        $(`[${dataAttrName}]`).each((i, el) => {
             changeFragmentVisibility(el, false);
         })
     }
@@ -40,7 +40,17 @@ let RevealScriptRunner = window.RevealScriptRunner || (() => {
     function changeFragmentVisibility(element, show){
         let selector = $(element).attr('data-global-fragment');
         if (selector) {
-            $(selector).toggle(show);
+            let globalFragment = $(selector);
+            globalFragment.toggle(show);
+            if(show) {
+                // TODO remove this code and maybe patch jquery somehow?
+                // Or fire event
+                if(globalFragment.hasClass('reload-img')){
+                    globalFragment.find('img').each((i, img) => {
+                        $(img).attr('src', $(img).attr('src'));
+                    });
+                }
+            }
         }
     }
 })();
