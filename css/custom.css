@@ -4,6 +4,10 @@
   box-shadow: none;
   margin: 0; }
 
+.reveal .progress, .reveal .controls {
+  background: rgba(0, 0, 0, 0.2);
+  color: #81010b; }
+
 .fullscreen-container {
   position: fixed;
   width: 100%;
@@ -19,3 +23,6 @@
       justify-content: center;
   display: -ms-flexbox;
   display: flex; }
+
+body {
+  background-color: #fcfcfc; }

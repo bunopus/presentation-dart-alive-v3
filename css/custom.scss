@@ -1,3 +1,6 @@
+$white: #fcfcfc;
+$dark_red: #81010b;
+
 .reveal {
   section {
     img {
@@ -6,6 +9,10 @@
       box-shadow: none;
       margin: 0;
     }
+  }
+  .progress, .controls {
+    background: rgba(0, 0, 0, 0.2);
+    color: $dark_red;
   }
 }
 
@@ -20,4 +27,8 @@
   flex-direction: column;
   justify-content: center;
   display: flex;
+}
+
+body {
+  background-color: $white;
 }
