@@ -14,13 +14,15 @@
 let RevealScriptRunner = window.RevealScriptRunner || (() => {
     const dataAttrName = "data-global-fragment";
 
-    Reveal.addEventListener('ready', slideIsVisible);
+    Reveal.addEventListener('ready', hideAllShowCurrent);
 
-    Reveal.addEventListener('slidechanged', slideIsVisible);
+    Reveal.addEventListener('slidechanged', hideAllShowCurrent);
 
-    function slideIsVisible(event) {
+    function hideAllShowCurrent(event) {
         hideFragments();
-        changeFragmentVisibility(event.currentSlide, true);
+        if(! Reveal.isOverview()) {
+            changeFragmentVisibility(event.currentSlide, true);
+        }
     }
 
     Reveal.addEventListener('fragmentshown', (event) => {
@@ -30,6 +32,13 @@ let RevealScriptRunner = window.RevealScriptRunner || (() => {
     Reveal.addEventListener('fragmenthidden', (event) => {
         changeFragmentVisibility(event.fragment, false);
     });
+
+    // hide fragments when navigating through the slides
+    document.addEventListener('keydown', function (event) {
+        if (event.keyCode === 27) {
+            hideFragments();
+        }
+    }, false);
 
     function hideFragments() {
         $(`[${dataAttrName}]`).each((i, el) => {
