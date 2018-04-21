@@ -31,7 +31,7 @@
 		<section data-background="#FFFFFF">
 			<img class="fragment" data-duration="2" data-animate="fadeIn" src="img/ministry.png">
 		</section>
-		<section data-background="img/amsterdamjs.png"></section>
+		<section data-background="img/amsterdamjs.png" data-js-errors></section>
 		<section data-background="img/title/sw-bg.png" data-global-fragment="#title-text"></section>
 		<section data-background="img/sw-white.png">About Me</section>
 		<section></section>
@@ -63,13 +63,78 @@
             {src: 'plugin/blur-background/blur-background.js'},
             {src: 'plugin/loader-splashscreen/loader-splashscreen.js'},
             {src: 'plugin/code-fragment-highlight/code-fragment-highlight.js'},
-            {src: 'plugin/global-fragments/global-fragments.js'}
+            {src: 'plugin/global-fragments/global-fragments.js'},
+            {src: 'plugin/script-runner/script-runner.js'},
+
         ],
         keyboard: {
-            39: 'next',
+            39: moveNext, // right arrow
+						32: moveNext, // space
+						34: moveNext, // page down
             37: 'prev'
-        }
+        },
+        script_runner: {
+            'data-js-errors': {
+                'slidechanged': function () {
+                    if(window.exceptionMode === undefined) {
+                        window.exceptionMode = true;
+                    }
+                }
+            }
+        },
     });
+
+    function moveNext() {
+        if(!window.exceptionMode) {
+            Reveal.next();
+            return true;
+        } else {
+            let message = 'JavaScript error';
+            window.exceptionModeCount = window.exceptionModeCount || 0;
+            switch(window.exceptionModeCount){
+								case 10:
+                    message = `I'm JavaScript, i don't want to work`;
+                    break;
+                case 11:
+                    message = 'Leave me alone!';
+                    break;
+                case 12:
+                    message = 'Why are you so rude?';
+                    break;
+								case 13:
+                    message = "I'm a cat now, go away!" +
+															"\n" +
+															"         /\\_/\\\n" +
+															"    ____/ o o \\\n" +
+															"  /~____  =ø= /\n" +
+															" (______)__m_m)";
+                    break;
+								default:
+								    message = 'JavaScript error';
+						}
+            window.exceptionModeCount++;
+            throw message;
+				}
+    }
+
+    function useDart() {
+        window.exceptionMode = false;
+        let message = "                              __\n" +
+            "                 ,_         .'  '._______\n" +
+            "                 ; `\\      / -=o=.-\"\"\"\"\"\"`\n" +
+            "                 ;   \\    /     /\n" +
+            "      __...----...;_  `;.:`\"=._/\n" +
+            "     '-.         `-.``;::'     |\n" +
+            "        `-.         `;::'     ;\n" +
+            "           `'-.....-/::.     /\n" +
+            "                    |::.   .'\n" +
+            "                   /\\:: .-`\n" +
+            "                  /';\\ /|\n" +
+            "                 /'; ;`;|\n" +
+            "                 `-'`-;_/";
+				console.log(message);
+        console.log("Everything is good now!");
+    }
 
     function waitForHLJS() {
         if (window.hljs) {
@@ -79,6 +144,7 @@
         console.log('Waiting for hljs');
         setTimeout(waitForHLJS, 1000);
     }
+
     Reveal.addEventListener('ready', () => {
         // patch jQuery to have show event
         (function ($) {
@@ -98,8 +164,6 @@
             });
         });
     });
-
-
 </script>
 </body>
 </html>
