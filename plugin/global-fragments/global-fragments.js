@@ -51,15 +51,6 @@ let RevealScriptRunner = window.RevealScriptRunner || (() => {
         if (selector) {
             let globalFragment = $(selector);
             globalFragment.toggle(show);
-            if(show) {
-                // TODO remove this code and maybe patch jquery somehow?
-                // Or fire event
-                if(globalFragment.hasClass('reload-img')){
-                    globalFragment.find('img').each((i, img) => {
-                        $(img).attr('src', $(img).attr('src'));
-                    });
-                }
-            }
         }
     }
 })();

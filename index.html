@@ -31,7 +31,7 @@
 		<section data-background="#FFFFFF">
 			<img class="fragment" data-duration="2" data-animate="fadeIn" src="img/ministry.png">
 		</section>
-		<section>AmsterdamJS no exceptions</section>
+		<section data-background="img/amsterdamjs.png"></section>
 		<section data-background="img/title/sw-bg.png" data-global-fragment="#title-text"></section>
 		<section data-background="img/sw-white.png">About Me</section>
 		<section></section>
@@ -79,6 +79,27 @@
         console.log('Waiting for hljs');
         setTimeout(waitForHLJS, 1000);
     }
+    Reveal.addEventListener('ready', () => {
+        // patch jQuery to have show event
+        (function ($) {
+            $.each(['show', 'hide'], function (i, ev) {
+                var el = $.fn[ev];
+                $.fn[ev] = function () {
+                    el.apply(this, arguments);
+                    this.trigger(ev);
+                    return el;
+                };
+            });
+        })(jQuery);
+
+        $('.reload-img').bind('show', function (el) {
+            $(el.currentTarget).find('img').each((i, img) => {
+                $(img).attr('src', $(img).attr('src'));
+            });
+        });
+    });
+
+
 </script>
 </body>
 </html>
