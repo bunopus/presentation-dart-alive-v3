@@ -1,0 +1,25 @@
+
+@font-face {
+    font-family: "SerifGothicStd";
+    src: url('itc-serif-gothic-std/SerifGothicStd.otf') format("truetype");
+}
+
+@font-face {
+    font-family: "SerifGothicStd-Black";
+    src: url('itc-serif-gothic-std/SerifGothicStd-Black.otf') format("truetype");
+}
+@font-face {
+    font-family: "SerifGothicStd-Bold";
+    src: url('itc-serif-gothic-std/SerifGothicStd-Bold.otf') format("truetype");
+}
+@font-face {
+    font-family: "SerifGothicStd-ExtraBold";
+    src: url('itc-serif-gothic-std/SerifGothicStd-ExtraBold.otf') format("truetype");
+}
+@font-face {
+    font-family: "SerifGothicStd-Light";
+    src: url('itc-serif-gothic-std/SerifGothicStd-Light.otf') format("truetype");
+}
+
+
+@font-face { font-family: Menlo; src: url('./Menlo-Regular.ttf'); }

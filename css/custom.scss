@@ -14,6 +14,31 @@ $dark_red: #81010b;
     background: rgba(0, 0, 0, 0.2);
     color: $dark_red;
   }
+
+
+  code {
+    background-color: $white;
+    padding: 20px;
+    max-height: 1500px;
+    font-size: 30px;
+    line-height: 35px;
+    overflow: hidden;
+    font-family: Menlo, monospace;
+
+    mark {
+      background-color: rgba(59, 138, 203, 0.33);
+    }
+  }
+
+  pre {
+    box-shadow: none;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: SerifGothicStd, serif;
+  }
+
+  font-family: SerifGothicStd-Light, serif;
 }
 
 .fullscreen-container {

@@ -10,11 +10,13 @@
 	<link rel="stylesheet" href="css/theme/white.css">
 
 	<!-- Theme used for syntax highlighting of code -->
-	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<link rel="stylesheet" href="lib/css/github-gist.css">
 
 	<link rel="stylesheet" href="css/custom.css">
 
 	<link rel="stylesheet" href="bower_components/animate.css/animate.min.css">
+	<link rel="stylesheet" href="fonts/stylesheet.css">
+
 
 	<!-- Printing and PDF exports -->
 	<script>
@@ -33,10 +35,11 @@
 		</section>
 		<section data-background="img/amsterdamjs.png" data-js-errors></section>
 		<section data-background="img/title/sw-bg.png" data-global-fragment="#title-text"></section>
-		<section data-background="img/sw-white.png">About Me</section>
-		<section></section>
+		<section>About Me</section>
 	</div>
 </div>
+
+<!--Font https://www.wfonts.com/font/itc-serif-gothic-std-->
 
 <div class="fullscreen-container reload-img" id="title-text">
 		<img src="img/title/dart.gif" style=" width:900px; animation-duration: 10s" class="animated zoomIn">
@@ -164,6 +167,17 @@
             });
         });
     });
+
+    for (let slide of document.getElementsByTagName('section')){
+        if (!(slide.getAttribute('data-background') ||
+            slide.getAttribute('data-background-video') ||
+            slide.getAttribute('data-background-color') ||
+            slide.getAttribute('data-background-image') ||
+            slide.getAttribute('data-background-iframe'))) {
+            slide.setAttribute('data-background-image', 'img/sw-white.png');
+            slide.setAttribute('data-background-size', 'cover');
+        }
+    }
 </script>
 </body>
 </html>

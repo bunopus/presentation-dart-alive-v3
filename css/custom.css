@@ -1,12 +1,27 @@
-.reveal section img {
-  border: none;
-  background: none;
-  box-shadow: none;
-  margin: 0; }
-
-.reveal .progress, .reveal .controls {
-  background: rgba(0, 0, 0, 0.2);
-  color: #81010b; }
+.reveal {
+  font-family: SerifGothicStd-Light, serif; }
+  .reveal section img {
+    border: none;
+    background: none;
+    box-shadow: none;
+    margin: 0; }
+  .reveal .progress, .reveal .controls {
+    background: rgba(0, 0, 0, 0.2);
+    color: #81010b; }
+  .reveal code {
+    background-color: #fcfcfc;
+    padding: 20px;
+    max-height: 1500px;
+    font-size: 30px;
+    line-height: 35px;
+    overflow: hidden;
+    font-family: Menlo, monospace; }
+    .reveal code mark {
+      background-color: rgba(59, 138, 203, 0.33); }
+  .reveal pre {
+    box-shadow: none; }
+  .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {
+    font-family: SerifGothicStd, serif; }
 
 .fullscreen-container {
   position: fixed;
