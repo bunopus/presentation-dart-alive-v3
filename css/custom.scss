@@ -39,6 +39,13 @@ $dark_red: #81010b;
   }
 
   font-family: SerifGothicStd-Light, serif;
+
+  .avatar {
+    border-radius: 200px 200px 200px 200px;
+    -moz-border-radius: 200px 200px 200px 200px;
+    -webkit-border-radius: 200px 200px 200px 200px;
+    border: 2px solid $dark_red;
+  }
 }
 
 .fullscreen-container {

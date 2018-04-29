@@ -35,7 +35,13 @@
 		</section>
 		<section data-background="img/amsterdamjs.png" data-js-errors></section>
 		<section data-background="img/title/sw-bg.png" data-global-fragment="#title-text"></section>
-		<section>About Me</section>
+		<section data-background="img/sw-white.png"><h5>About Me</h5></section>
+		<section>
+			<img src="img/avatar.png" style="width: 180px;" class="avatar">
+			<p class="fragment">11 years in IT</p>
+			<p class="fragment">C++, C#, CoffeeScript, JavaScript and stuff</p>
+			<img class="fragment" src="img/chewbaka-speaks.png" style="height: 250px; padding-left: 320px; padding-top: 20px">
+		</section>
 	</div>
 </div>
 
@@ -54,6 +60,7 @@
     // - https://github.com/hakimel/reveal.js#configuration
     // - https://github.com/hakimel/reveal.js#dependencies
     Reveal.initialize({
+        transition: 'fade',
         history: true,
         dependencies: [
             {src: 'plugin/markdown/marked.js'},
@@ -167,17 +174,6 @@
             });
         });
     });
-
-    for (let slide of document.getElementsByTagName('section')){
-        if (!(slide.getAttribute('data-background') ||
-            slide.getAttribute('data-background-video') ||
-            slide.getAttribute('data-background-color') ||
-            slide.getAttribute('data-background-image') ||
-            slide.getAttribute('data-background-iframe'))) {
-            slide.setAttribute('data-background-image', 'img/sw-white.png');
-            slide.setAttribute('data-background-size', 'cover');
-        }
-    }
 </script>
 </body>
 </html>
