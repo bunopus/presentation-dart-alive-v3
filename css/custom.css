@@ -1,32 +1,57 @@
-.reveal {
-  font-family: SerifGothicStd-Light, serif; }
+.reveal section {
+  color: #120404; }
   .reveal section img {
     border: none;
     background: none;
     box-shadow: none;
     margin: 0; }
-  .reveal .progress, .reveal .controls {
-    background: rgba(0, 0, 0, 0.2);
-    color: #81010b; }
-  .reveal code {
-    background-color: #fcfcfc;
-    padding: 20px;
-    max-height: 1500px;
-    font-size: 30px;
-    line-height: 35px;
-    overflow: hidden;
-    font-family: Menlo, monospace; }
-    .reveal code mark {
-      background-color: rgba(59, 138, 203, 0.33); }
-  .reveal pre {
-    box-shadow: none; }
-  .reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5 {
-    font-family: SerifGothicStd, serif; }
-  .reveal .avatar {
-    border-radius: 200px 200px 200px 200px;
-    -moz-border-radius: 200px 200px 200px 200px;
-    -webkit-border-radius: 200px 200px 200px 200px;
-    border: 2px solid #81010b; }
+
+.reveal .progress, .reveal .controls {
+  background: rgba(0, 0, 0, 0.2);
+  color: #460404; }
+
+.reveal code {
+  background-color: #fcfcfc;
+  padding: 20px;
+  max-height: 1500px;
+  font-size: 30px;
+  line-height: 35px;
+  overflow: hidden;
+  font-family: Menlo, monospace; }
+  .reveal code mark {
+    background-color: rgba(59, 138, 203, 0.33); }
+
+.reveal pre {
+  box-shadow: none; }
+
+.reveal h1, .reveal h2, .reveal h3, .reveal h4, .reveal h5, .reveal {
+  font-family: SerifGothicStd, serif; }
+
+.reveal h5 {
+  font-family: SerifGothicStd-Light, serif; }
+
+.reveal .avatar {
+  border-radius: 200px 200px 200px 200px;
+  -moz-border-radius: 200px 200px 200px 200px;
+  -webkit-border-radius: 200px 200px 200px 200px;
+  border: 5px solid #460404; }
+
+.reveal .image-float {
+  float: left;
+  position: relative;
+  top: 0;
+  left: 0; }
+  .reveal .image-float .fragment:not(.current-fragment) img {
+    -webkit-filter: blur(10px);
+            filter: blur(10px); }
+
+.reveal .numbers span.title {
+  font-weight: 100; }
+
+.reveal .numbers span.number {
+  color: #790A12;
+  font-weight: 700;
+  font-size: 25vh; }
 
 .fullscreen-container {
   position: fixed;

@@ -1,5 +1,8 @@
 $white: #fcfcfc;
-$dark_red: #81010b;
+$dark_red: #460404;
+$mid_dark_red: #790A12;
+$mid_light_red: #B41E2A;
+$brown: #120404;
 
 .reveal {
   section {
@@ -9,6 +12,8 @@ $dark_red: #81010b;
       box-shadow: none;
       margin: 0;
     }
+
+    color: $brown;
   }
   .progress, .controls {
     background: rgba(0, 0, 0, 0.2);
@@ -34,17 +39,44 @@ $dark_red: #81010b;
     box-shadow: none;
   }
 
-  h1, h2, h3, h4, h5 {
+  h1, h2, h3, h4, h5, & {
     font-family: SerifGothicStd, serif;
   }
 
-  font-family: SerifGothicStd-Light, serif;
+  h5 {
+    font-family: SerifGothicStd-Light, serif;
+  }
+
 
   .avatar {
     border-radius: 200px 200px 200px 200px;
     -moz-border-radius: 200px 200px 200px 200px;
     -webkit-border-radius: 200px 200px 200px 200px;
-    border: 2px solid $dark_red;
+    border: 5px solid $dark_red;
+  }
+
+  .image-float {
+    float: left;
+    position: relative;
+    top: 0;
+    left: 0;
+    .fragment:not(.current-fragment) {
+      img {
+        filter: blur(10px);
+      }
+    }
+  }
+
+  .numbers {
+    span.title {
+      font-weight: 100;
+    }
+
+    span.number {
+      color: $mid_dark_red;
+      font-weight: 700;
+      font-size: 25vh;
+    }
   }
 }
 
