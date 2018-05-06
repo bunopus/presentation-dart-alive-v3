@@ -12,7 +12,7 @@ $brown: #120404;
       box-shadow: none;
       margin: 0;
     }
-
+    font-family: komika_slimregular, serif;
     color: $brown;
   }
   .progress, .controls {
@@ -47,6 +47,9 @@ $brown: #120404;
     font-family: SerifGothicStd-Light, serif;
   }
 
+  .comic-slim {
+    font-family: komika_slimregular, serif;
+  }
 
   .avatar {
     border-radius: 200px 200px 200px 200px;
@@ -70,13 +73,19 @@ $brown: #120404;
   .numbers {
     span.title {
       font-weight: 100;
+      font-family: komika_handregular, serif;
     }
 
     span.number {
-      color: $mid_dark_red;
+      font-family: SerifGothicStd, serif;
+      color: $mid_light_red;
       font-weight: 700;
-      font-size: 25vh;
+      font-size: 20vh;
     }
+  }
+
+  .emphasis {
+    color: $mid_light_red;
   }
 }
 

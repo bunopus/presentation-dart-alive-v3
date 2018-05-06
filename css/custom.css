@@ -1,4 +1,5 @@
 .reveal section {
+  font-family: komika_slimregular, serif;
   color: #120404; }
   .reveal section img {
     border: none;
@@ -30,6 +31,9 @@
 .reveal h5 {
   font-family: SerifGothicStd-Light, serif; }
 
+.reveal .comic-slim {
+  font-family: komika_slimregular, serif; }
+
 .reveal .avatar {
   border-radius: 200px 200px 200px 200px;
   -moz-border-radius: 200px 200px 200px 200px;
@@ -46,12 +50,17 @@
             filter: blur(10px); }
 
 .reveal .numbers span.title {
-  font-weight: 100; }
+  font-weight: 100;
+  font-family: komika_handregular, serif; }
 
 .reveal .numbers span.number {
-  color: #790A12;
+  font-family: SerifGothicStd, serif;
+  color: #B41E2A;
   font-weight: 700;
-  font-size: 25vh; }
+  font-size: 20vh; }
+
+.reveal .emphasis {
+  color: #B41E2A; }
 
 .fullscreen-container {
   position: fixed;
