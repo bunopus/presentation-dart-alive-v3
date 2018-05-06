@@ -74,24 +74,125 @@
 			<section><span>From</span><img src="img/from_willage.png" style="height: 500px; padding-bottom: 5vh"></section>
 			<section><span>To</span><img src="img/to_city.png" style="height: 500px; padding-bottom: 5vh"></section>
 		</section>
-		<section data-background="img/sw-white.png"><h2><span class="emphasis">I.</span> Story</h2></section>
-		<section><h3 class="comic-slim">In the Galaxy, far, far away</h3></section>
-		<section data-background="img/js_killer/js_killer_bg.png">
-			<!--TODO сделать красивее-->
-			<img src="img/js_killer/js_killer_1.png">
-			<img src="img/js_killer/js_killer_2.png" class="fragment">
-			<img src="img/js_killer/js_killer_3.png" class="fragment">
-			<img src="img/js_killer/js_killer_4.png" class="fragment">
+		<section>
+			<section data-background="img/sw-white.png"><h2><span class="emphasis">I.</span> Story</h2></section>
+			<section><h3 class="comic-slim">In the Galaxy, far, far away</h3></section>
+			<section data-background="img/js_killer/js_killer_bg.png">
+				<!--TODO сделать красивее-->
+				<img src="img/js_killer/js_killer_1.png">
+				<img src="img/js_killer/js_killer_2.png" class="fragment">
+				<img src="img/js_killer/js_killer_3.png" class="fragment">
+				<img src="img/js_killer/js_killer_4.png" class="fragment">
+			</section>
+			<section data-background="img/lang-vader.png" data-background-size="contain"></section>
+			<section data-chart-popularity-1>
+				<div class="chart line-chart" style="width: 1000px; height: 600px; font-size:16px"></div>
+				<div class="fragment" data-chart-popularity-2></div>
+				<div class="fragment" data-chart-popularity-3></div>
+			</section>
+			<section><img src="img/lang-c3po.png" style="height: 600px"></section>
+			<section>
+				<!--TODO Что делать со шрифтами?-->
+				<h5 class="comic-slim">Most important things in language</h5>
+				<ul>
+					<li class="fragment">Tooling and Features</li>
+					<li class="fragment">Niche</li>
+					<li class="fragment">Community</li>
+				</ul>
+			</section>
 		</section>
-		<section data-background="img/lang-vader.png" data-background-size="contain"></section>
-		<section data-chart-popularity-1>
-			<div class="chart line-chart" style="width: 1000px; height: 600px; font-size:16px"></div>
-			<div class="fragment" data-chart-popularity-2></div>
-			<div class="fragment" data-chart-popularity-3></div>
+
+		<section>
+			<section data-background="img/sw-white.png"><h2><span class="emphasis">II.</span> Tooling and Features</h2></section>
+			<section>
+				<h2>Tree Shaking</h2>
+			</section>
+			<section data-fullscreen>
+                        <pre><code data-trim data-noescape class="dart">
+<span class="fragment">import 'dart:collection';</span>
+
+void main() {
+
+}
+                        </code></pre>
+			</section>
+			<section data-fullscreen>
+                        <pre><code data-trim data-noescape class="dart">
+<span class="grayed">import 'dart:collection';</span>
+
+void main() {
+
+}
+                        </code></pre>
+			</section>
+			<section data-fullscreen>
+                        <pre><code data-trim data-noescape class="dart">
+<span class="grayed">import 'dart:collection';
+
+void main() {
+
+}</span>
+                        </code></pre>
+			</section>
+			<section data-fullscreen>
+                        <pre><code data-trim data-noescape class="dart">
+class DoomGuy {
+}
+
+void main() {
+  var guy = new DoomGuy();
+}
+
+                        </code></pre>
+			</section>
+			<section data-fullscreen>
+                        <pre><code data-trim data-noescape class="dart">
+<span class="grayed">class DoomGuy {
+}
+
+void main() {
+  var guy = new DoomGuy();
+}</span>
+                        </code></pre>
+			</section>
+			<section data-fullscreen>
+                        <pre><code data-trim data-noescape class="dart">
+class DoomGuy {
+  void saySomething() => print("Hello, MTFKR");
+}
+
+void main() {
+  var guy = new DoomGuy();
+  guy.saySomething();
+}
+                        </code></pre>
+			</section>
+			<section data-fullscreen>
+                        <pre><code data-trim data-noescape class="js">
+  <span class="grayed">
+  //...
+  }], ["", "main.dart",, F, {
+    "^": "",</span>
+    main: function() {
+      H.printString("Hello, MTFKR");
+    }
+  <span class="grayed">}, 1]];</span>
+  //...
+                        </code></pre>
+			</section>
 		</section>
-		<section><img src="img/lang-c3po.png" style="height: 600px"></section>
-		<section>дарт вейдер</section>
-		<section>главное у языка - тулинг и ниша</section>
+
+		<section>
+			<section data-background="img/sw-white.png"><h2><span class="emphasis">III.</span> Niche</h2></section>
+		</section>
+
+		<section>
+			<section data-background="img/sw-white.png"><h2><span class="emphasis">IV.</span> Community</h2></section>
+		</section>
+
+		<section>
+			<section data-background="img/sw-white.png"><h2><span class="emphasis">V.</span> The End</h2></section>
+		</section>
 	</div>
 </div>
 <!--C3PO и штурмовики http://readcomiconline.to/Comic/Star-Wars-2015/Issue-46?id=132752-->

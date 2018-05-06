@@ -25,13 +25,19 @@ $brown: #120404;
     background-color: $white;
     padding: 20px;
     max-height: 1500px;
-    font-size: 30px;
-    line-height: 35px;
+    font-size: 33px;
+    line-height: 40px;
     overflow: hidden;
     font-family: Menlo, monospace;
 
     mark {
       background-color: rgba(59, 138, 203, 0.33);
+    }
+
+    span.grayed {
+      &, .hljs-title, .hljs-keyword, .hljs-string {
+        color: gray !important;
+      }
     }
   }
 
