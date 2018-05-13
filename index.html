@@ -37,16 +37,18 @@
 		</section>
 		<section data-background="img/amsterdamjs.png" data-js-errors></section>
 		<section data-background="img/title/sw-bg.png" data-global-fragment="#title-text"></section>
+
 		<section>
-			<section>
-				<img src="img/avatar.png" style="width: 180px;" class="avatar">
-				<!--TODO сделать как комикс -->
-				<p class="fragment">11 years of experience</p>
-				<p class="fragment">C++, C#, CoffeeScript, JavaScript and stuff</p>
-				<img class="fragment" src="img/chewbaka-speaks.png"
-						 style="height: 250px; padding-left: 320px; padding-top: 20px">
-			</section>
-			<section><img src="img/logo_black_red.png" style="width: 500px"></section>
+			<section data-parallax></section>
+			<section></section>
+		</section>
+		<section>
+			<section></section>
+			<section></section>
+			<section></section>
+		</section>
+		<section>
+			<section data-parallax-end><img src="img/logo_black_red.png" style="width: 500px"></section>
 			<section>
 				<img src="img/logo_black_red.png" style="width: 200px">
 				<div class="image-float">
@@ -198,6 +200,8 @@ void main() {
 <!--C3PO и штурмовики http://readcomiconline.to/Comic/Star-Wars-2015/Issue-46?id=132752-->
 <!--Font https://www.wfonts.com/font/itc-serif-gothic-std-->
 <!--Font http://www.1001fonts.com/komika-font.html-->
+<!--<a href='https://www.freepik.com/free-vector/five-empty-comic-book-page-colorful-template-background_1443969.htm'>Designed by Freepik</a>œ-->
+<!--<a href='https://www.freepik.com/free-vector/coloured-comic-bubbles-speech_895138.htm'>Designed by Freepik</a>-->
 
 <div class="fullscreen-container reload-img" id="title-text">
 		<img src="img/title/dart.gif" style=" width:900px; animation-duration: 10s" class="animated zoomIn">
@@ -1050,6 +1054,39 @@ void main() {
                     });
                 }
             },
+						'data-parallax': {
+                'slidechanged': function (event) {
+                	Reveal.configure({
+
+                      // Parallax background image
+                      parallaxBackgroundImage: 'img/parallax.png', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+
+                      // Parallax background size
+                      parallaxBackgroundSize: '3840px 3240px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+
+                      // Number of pixels to move the parallax background per slide
+                      // - Calculated automatically unless specified
+                      // - Set to 0 to disable movement along an axis
+                      parallaxBackgroundHorizontal: 1920,
+                      parallaxBackgroundVertical: 1080
+
+                  });
+                }
+						},
+            'data-parallax-end': {
+                'slidechanged': function () {
+                    Reveal.configure({
+
+                        // Parallax background image
+                        parallaxBackgroundImage: null, // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+
+                        // Parallax background size
+                        parallaxBackgroundSize: null, // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
+
+
+                    });
+                }
+            }
         },
     });
 
