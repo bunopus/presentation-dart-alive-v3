@@ -123,6 +123,20 @@
   background-color: #f8af00;
   border-color: #f8af00; }
 
+.reveal .center {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: center;
+      align-items: center;
+  -ms-flex-pack: center;
+      justify-content: center; }
+
+.reveal .news-paper {
+  height: 700px;
+  position: relative; }
+  .reveal .news-paper img {
+    box-shadow: 3px -4px 19px 0px rgba(0, 0, 0, 0.75); }
+
 .fullscreen-container {
   position: fixed;
   width: 100%;
