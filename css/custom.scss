@@ -218,3 +218,6 @@ $brown: #120404;
 body {
   background-color: $white;
 }
+div.slide-background.present[data-background-hash="img/community.pngnullnullnullnull#FFFFFFFnullnullnull"] {
+  filter: blur(20px) opacity(50%);
+}

@@ -47,7 +47,7 @@
 			<section></section>
 			<section></section>
 		</section>
-		<section>
+		<section data-bg-dot>
 			<section data-parallax-end><img src="img/logo_black_red.png" style="width: 500px"></section>
 			<section>
 				<img src="img/logo_black_red.png" style="width: 200px">
@@ -78,8 +78,8 @@
 		</section>
 		<section>
 			<section data-background="img/sw-white.png"><h2><span class="emphasis">I.</span> Story</h2></section>
-			<section><h3 class="comic-slim">In the Galaxy, far, far away</h3></section>
-			<section data-background="img/js_killer/js_killer_bg.png">
+			<section data-bg-dot><h3 class="comic-slim">In the Galaxy, far, far away</h3></section>
+			<section data-background="img/js_killer/js_killer_bg.png" data-bg-dot>
 				<div class="center">
 					<p class="fragment news-paper"><img src="img/js_killer/js_killer_1.png"/></p>
 					<p class="fragment news-paper" style="position:absolute; transform: rotate(5deg)"><img src="img/js_killer/js_killer_2.png"/></p>
@@ -94,7 +94,7 @@
 				<div class="fragment" data-chart-popularity-3></div>
 			</section>
 			<section><img src="img/lang-c3po.png" style="height: 600px"></section>
-			<section class="li-slide">
+			<section class="li-slide" data-bg-dot>
 				<h4 class="comic-slim">Most important things in language</h4>
 				<ul>
 					<li class="fragment">Tooling and Features</li>
@@ -106,14 +106,14 @@
 
 		<section>
 			<section data-background="img/sw-white.png"><h2><span class="emphasis">II.</span> Tooling and Features</h2></section>
-			<section class="li-slide">
+			<section class="li-slide" data-bg-dot>
 				<div><img src="img/dart_logo_red.png" style="height: 100px;"></div>
 				<ul>
 					<li class="fragment">Type System</li>
 					<li  class="fragment">Multi-Platform</li>
 					<li class="fragment">SDK</li>
 					<li class="fragment">Tree Shaking</li>
-					<li class="fragment">Porgs!</li>
+					<li class="fragment"><span class="fragment strike">Porgs!</span></li>
 				</ul>
 			</section>
 			<section data-background-video="video/porg.mp4" data-background-video-loop="loop"></section>
@@ -125,6 +125,8 @@
 
 		<section>
 			<section data-background="img/sw-white.png"><h2><span class="emphasis">IV.</span> Community</h2></section>
+			<section data-background="img/community.png"></section>
+			<section data-background="img/community.png" data-background-color="#FFFFFFF">ссылки</section>
 		</section>
 
 		<section>
@@ -137,6 +139,7 @@
 <!--Font http://www.1001fonts.com/komika-font.html-->
 <!--<a href='https://www.freepik.com/free-vector/five-empty-comic-book-page-colorful-template-background_1443969.htm'>Designed by Freepik</a>œ-->
 <!--<a href='https://www.freepik.com/free-vector/coloured-comic-bubbles-speech_895138.htm'>Designed by Freepik</a>-->
+<!--<a href='https://www.freepik.com/free-vector/grunge-textures-set_1389624.htm'>Designed by Freepik</a>-->
 
 <div class="fullscreen-container reload-img" id="title-text">
 		<img src="img/title/dart.gif" style=" width:900px; animation-duration: 10s" class="animated zoomIn">
@@ -994,7 +997,7 @@
                 	Reveal.configure({
 
                       // Parallax background image
-                      parallaxBackgroundImage: 'img/parallax.png', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
+                      parallaxBackgroundImage: 'img/about-parallax.png', // e.g. "https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg"
 
                       // Parallax background size
                       parallaxBackgroundSize: '3840px 3240px', // CSS syntax, e.g. "2100px 900px" - currently only pixels are supported (don't use % or auto)
@@ -1105,6 +1108,15 @@
             });
         });
     });
+
+    for (let slide of document.getElementsByTagName('section')){
+        if (slide.hasAttribute('data-bg-dot')){
+            console.log(slide);
+            slide.setAttribute('data-background-image', 'img/bg-dots.png');
+            slide.setAttribute('data-background-size', 'contain');
+        }
+    }
+
 </script>
 </body>
 </html>
