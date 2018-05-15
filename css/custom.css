@@ -137,6 +137,11 @@
   .reveal .news-paper img {
     box-shadow: 3px -4px 19px 0px rgba(0, 0, 0, 0.75); }
 
+.reveal .li-slide ul {
+  padding-top: 20px; }
+  .reveal .li-slide ul li {
+    padding-bottom: 20px; }
+
 .fullscreen-container {
   position: fixed;
   width: 100%;

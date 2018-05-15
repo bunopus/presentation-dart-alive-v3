@@ -191,6 +191,15 @@ $brown: #120404;
     height: 700px;
     position: relative;
   }
+
+  .li-slide {
+    ul {
+      padding-top: 20px;
+      li {
+        padding-bottom: 20px;
+      }
+    }
+  }
 }
 
 .fullscreen-container {
