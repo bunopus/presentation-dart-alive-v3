@@ -142,6 +142,31 @@
   .reveal .li-slide ul li {
     padding-bottom: 20px; }
 
+.reveal .social {
+  font-weight: 100;
+  font-size: 1.2em;
+  padding-bottom: 60px; }
+  .reveal .social .optional {
+    font-size: 0.7em; }
+    .reveal .social .optional a, .reveal .social .optional {
+      color: rgba(0, 0, 0, 0.53); }
+  .reveal .social a:hover {
+    text-decoration: underline; }
+  .reveal .social .twitter {
+    padding-bottom: 50px; }
+    .reveal .social .twitter a {
+      color: #460404; }
+  .reveal .social img.small-logo {
+    width: 30px;
+    padding-right: 5px;
+    margin: 0;
+    vertical-align: middle; }
+  .reveal .social .block {
+    display: inline-block;
+    vertical-align: middle; }
+  .reveal .social img.block {
+    margin-right: -5px; }
+
 .fullscreen-container {
   position: fixed;
   width: 100%;
@@ -164,3 +189,12 @@ body {
 div.slide-background.present[data-background-hash="img/community.pngnullnullnullnull#FFFFFFFnullnullnull"] {
   -webkit-filter: blur(20px) opacity(50%);
           filter: blur(20px) opacity(50%); }
+
+#credits {
+  display: none;
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  text-align: center; }
+  #credits, #credits a, #credits a:visited, #credits a:hover {
+    color: rgba(0, 0, 0, 0.56); }
