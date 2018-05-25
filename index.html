@@ -133,14 +133,13 @@
 		<section>
 			<section data-background="img/sw-white.png"><h2><span class="emphasis">IV.</span> Community</h2></section>
 			<section data-background="img/community.png"></section>
-			<section data-background="img/community.png" data-background-color="#FFFFFFF">ссылки</section>
 		</section>
 
 		<section>
 			<section data-background="img/sw-white.png"><h2><span class="emphasis">V.</span> The End</h2></section>
-			<section data-background="img/bg-end.png" data-credits>
+			<section data-background="img/bg-end.png" data-global-fragment="#credits">
 				<div class="social">
-					<div class="twitter"><img src="img/social/twitter.png" style="width: 30px"><a href="https://twitter.com/bunopus">@bunopus</a></div>
+					<div class="twitter"><img src="img/social/twitter.png" style="width: 50px"><a href="https://twitter.com/bunopus">@bunopus</a></div>
 					<div class="optional">
 						<span>Russian Dart: <a href="http://bit.ly/dart_ru">http://bit.ly/dart_ru</a></span>
 						<div>
@@ -154,12 +153,13 @@
 		</section>
 	</div>
 </div>
-<div id="credits">All pictures are from <a href="http://readcomiconline.to/Comic/Star-Wars-2015/Issue-46?id=132752">Marvel</a>. Font from <a href="https://www.wfonts.com/font/itc-serif-gothic-std">wfonts</a>, <a href="https://www.freepik.com/free-vector/coloured-comic-bubbles-speech_895138.htm">Designed by Freepik</a>
 
 <div class="fullscreen-container reload-img" id="title-text">
 		<img src="img/title/dart.gif" style=" width:900px; animation-duration: 10s" class="animated zoomIn">
 		<img src="img/title/return.png" style=" width:450px; padding-top: 50px; animation-delay: 10.3s; animation-duration: 2s" class="animated fadeIn">
 </div>
+
+<div id="credits">All pictures are from <a href="http://readcomiconline.to/Comic/Star-Wars-2015/Issue-46?id=132752">Marvel</a>. Font from <a href="https://www.wfonts.com/font/itc-serif-gothic-std">wfonts</a>, <a href="https://www.freepik.com/free-vector/coloured-comic-bubbles-speech_895138.htm">Designed by Freepik</a>
 
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.js"></script>
@@ -1040,20 +1040,7 @@
                     });
                 }
             },
-            'data-credits': {
-                'slidechanged': function () {
-                    $("#credits").show();
-                }
-            }
         },
-    });
-
-    function cleanupEffects() {
-        $("#credits").hide();
-    }
-
-    Reveal.addEventListener('slidechanged', function () {
-        cleanupEffects();
     });
 
     function moveNext() {
