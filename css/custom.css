@@ -11,6 +11,11 @@
   background: rgba(0, 0, 0, 0.2);
   color: #460404; }
 
+.reveal a {
+  color: #790A12; }
+  .reveal a:hover {
+    color: #B41E2A; }
+
 .reveal code {
   background-color: #fcfcfc;
   padding: 20px;

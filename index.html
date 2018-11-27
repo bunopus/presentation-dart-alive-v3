@@ -35,15 +35,14 @@
 		<section data-background="#FFFFFF">
 			<img class="fragment" data-duration="2" data-animate="fadeIn" src="img/ministry.png">
 		</section>
-		<section data-background="img/amsterdamjs.png" data-js-errors></section>
 		<section data-background="img/title/sw-bg.png" data-global-fragment="#title-text"></section>
 
 		<section>
 			<section data-parallax></section>
 			<section></section>
+			<section></section>
 		</section>
 		<section>
-			<section></section>
 			<section></section>
 			<section></section>
 		</section>
@@ -66,11 +65,11 @@
 				<span class="title">Years with Dart</span>
 			</section>
 			<section class="numbers">
-				<span class="number">60+</span><br>
+				<span class="number">70+</span><br>
 				<span class="title">Dart developers</span>
 			</section>
 			<section class="numbers">
-				<span class="number">700 000</span><br>
+				<span class="number" style="font-size: 18vh">1 250 000</span><br>
 				<span class="title">Lines of Dart code</span>
 			</section>
 			<section><span>From</span><img src="img/from_willage.png" style="height: 500px; padding-bottom: 5vh"></section>
@@ -162,11 +161,12 @@ description: Star Wars movies app
 
 		<section>
 			<section data-background="img/sw-white.png"><h2><span class="emphasis">V.</span> The End</h2></section>
+			<section><span><a href="https://dartup.ru/" target="_blank">https://dartup.ru/</a></span></section>
 			<section data-background="img/bg-end.png" data-global-fragment="#credits">
 				<div class="social">
 					<div class="twitter"><img src="img/social/twitter.png" style="width: 50px"><a href="https://twitter.com/bunopus">@bunopus</a></div>
 					<div class="optional">
-						<span>Russian Dart: <a href="http://bit.ly/dart_ru">http://bit.ly/dart_ru</a></span>
+						<span>Russian Dart: <a href="https://t.me/rudart">https://t.me/rudart</a></span>
 						<div>
 							<img src="img/social/vk-social.png" class="plain block small-logo"/>
 							<img src="img/social/facebook-social.png" class="plain block small-logo"/>
@@ -180,7 +180,7 @@ description: Star Wars movies app
 </div>
 
 <div class="fullscreen-container reload-img" id="title-text">
-		<img src="img/title/dart.gif" style=" width:900px; animation-duration: 10s" class="animated zoomIn">
+		<img src="img/title/dart.gif" style="width:900px; animation-duration: 10s" class="animated zoomIn">
 		<img src="img/title/return.png" style=" width:450px; padding-top: 50px; animation-delay: 10.3s; animation-duration: 2s" class="animated fadeIn">
 </div>
 
@@ -215,19 +215,10 @@ description: Star Wars movies app
 
         ],
         keyboard: {
-            39: moveNext, // right arrow
-						32: moveNext, // space
-						34: moveNext, // page down
+            39: 'next',
             37: 'prev'
         },
         script_runner: {
-            // 'data-js-errors': {
-            //     'slidechanged': function () {
-            //         if(window.exceptionMode === undefined) {
-            //             window.exceptionMode = true;
-            //         }
-            //     }
-            // },
             'data-chart-popularity-1': {
                 'slidechanged': function (event) {
                     var slide = event.currentSlide;
@@ -1067,58 +1058,6 @@ description: Star Wars movies app
             },
         },
     });
-
-    function moveNext() {
-        if(!window.exceptionMode) {
-            Reveal.next();
-            return true;
-        } else {
-            let message = 'JavaScript error';
-            window.exceptionModeCount = window.exceptionModeCount || 0;
-            switch(window.exceptionModeCount){
-								case 10:
-                    message = `I'm JavaScript, i don't want to work`;
-                    break;
-                case 11:
-                    message = 'Leave me alone!';
-                    break;
-                case 12:
-                    message = 'Why are you so rude?';
-                    break;
-								case 13:
-                    message = "I'm a cat now, go away!" +
-															"\n" +
-															"         /\\_/\\\n" +
-															"    ____/ o o \\\n" +
-															"  /~____  =ø= /\n" +
-															" (______)__m_m)";
-                    break;
-								default:
-								    message = 'JavaScript error';
-						}
-            window.exceptionModeCount++;
-            throw message;
-				}
-    }
-
-    function useDart() {
-        window.exceptionMode = false;
-        let message = "                              __\n" +
-            "                 ,_         .'  '._______\n" +
-            "                 ; `\\      / -=o=.-\"\"\"\"\"\"`\n" +
-            "                 ;   \\    /     /\n" +
-            "      __...----...;_  `;.:`\"=._/\n" +
-            "     '-.         `-.``;::'     |\n" +
-            "        `-.         `;::'     ;\n" +
-            "           `'-.....-/::.     /\n" +
-            "                    |::.   .'\n" +
-            "                   /\\:: .-`\n" +
-            "                  /';\\ /|\n" +
-            "                 /'; ;`;|\n" +
-            "                 `-'`-;_/";
-				console.log(message);
-        console.log("Everything is good now!");
-    }
 
     function waitForHLJS() {
         if (window.hljs) {

@@ -20,6 +20,12 @@ $brown: #120404;
     color: $dark_red;
   }
 
+  a {
+    color: $mid_dark_red;
+    &:hover {
+      color: $mid_light_red;
+    }
+  }
 
   code {
     background-color: $white;
